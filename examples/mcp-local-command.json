@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "within": {
+      "command": "npx",
+      "args": ["-y", "github:startupbuilders777/within-mcp"]
+    }
+  }
+}

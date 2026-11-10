@@ -1,0 +1,23 @@
+{
+  "name": "within",
+  "owner": {
+    "name": "within",
+    "email": "hello@shopwithin.co",
+    "url": "https://shopwithin.co"
+  },
+  "metadata": {
+    "description": "Shop independent luxury boutiques: live stock, sizes, prices, where to buy and what it costs delivered.",
+    "version": "0.3.1"
+  },
+  "plugins": [
+    {
+      "name": "within",
+      "source": "./plugins/within",
+      "description": "Live stock at independent luxury boutiques: find an item in your size, where to buy a designer, what it costs delivered, and boutiques in more than 140 cities. 26 read only tools and one skill on how to shop the boutiques well.",
+      "version": "0.3.1",
+      "category": "shopping",
+      "homepage": "https://shopwithin.co/agents",
+      "keywords": ["shopping", "boutiques", "luxury", "fashion", "designer", "sneakers", "where to buy", "size conversion", "import duty"]
+    }
+  ]
+}

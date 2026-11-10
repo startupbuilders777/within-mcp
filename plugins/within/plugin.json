@@ -1,0 +1,128 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "within",
+  "version": "0.3.1",
+  "description": "Live stock at independent luxury boutiques: find an item in your size, where to buy a designer, what it costs delivered, and boutiques in more than 140 cities. Twenty-six read only tools over the within MCP server, and one skill that shows an agent how to shop the boutiques well.",
+  "author": {
+    "name": "within",
+    "email": "hello@shopwithin.co",
+    "url": "https://shopwithin.co"
+  },
+  "homepage": "https://shopwithin.co/agents",
+  "license": "MIT",
+  "keywords": [
+    "shopping",
+    "boutiques",
+    "luxury",
+    "fashion",
+    "designer",
+    "sneakers",
+    "vintage",
+    "visual search",
+    "size conversion",
+    "import duty",
+    "trending"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "within",
+        "shortDescription": "Live stock at luxury boutiques",
+        "longDescription": "within lists what independent luxury boutiques have in stock right now, with sizes and stock read from each shop's own register. Ask in plain words: Jordan 4s in a size 10 under 500 dollars, where to buy Chrome Hearts, what Canada Goose has marked down, or something like the bag in a screenshot. Every answer names the shop, the sizes in stock and the price in the shop's own currency, and gives the page on shopwithin.co where the shopper buys through the boutique's own checkout.\n\nWhat it answers:\nFinding things: a search by words, designer, size, city and price (search_pieces); new arrivals (new_arrivals); marked-down items with the old and the new price (on_sale); what is trending this week (trending_now); items that look like a photo, a screenshot or a TikTok or Pinterest post (visual_search); similar items (similar_pieces).\nOne item: every size's live stock (get_piece); how it fits, from the boutique's own measurements (piece_fit); what to wear with it (wear_with); what it costs delivered to a country, with delivery, duty and tax (delivered_price); two to four items side by side (compare_pieces).\nDesigners: who owns a brand, where it is made, what is in stock and at what prices (designer_guide); where to buy it (where_to_buy); what an item costs across shops (price_check); the brands the same boutiques stock (brands_like).\nBoutiques: the shops that sell on within and their stock (list_boutiques, boutique_shelf); a directory of independent boutiques in more than 140 cities (boutique_directory, boutique_details); each shop's delivery, pickup and return terms (delivery_and_returns, pickup_today).\nSizes and customs: a ring, shoe, clothing, suit, belt or hat size in every other system, from published charts (convert_size); duty, tax and fees on an order shipped to the US, Canada, the UK or Australia, with the official source of each line (estimate_duty).\nIdeas: gift ideas by who they are for and a budget (gift_ideas); outfits with the items in stock (outfit_ideas); within's own guides (find_notes).\n\nWho it is for: people who shop with an assistant and want real stock at real shops, with the page to buy; anyone who wants a size conversion or a duty estimate with its source named.\n\nWhat it never does: it never takes a payment, holds an item or places an order; the shopper buys on the boutique's page. It never stores a photo: an image sent to the photo search is matched in memory and discarded. It never invents a size, a price or a stock level; when nothing matches, it says so. It reads independent boutiques, not mass market stores, and gives no style advice of its own. No account and no key.",
+        "developerName": "within",
+        "category": "Other",
+        "capabilities": [
+          "Search live stock at independent luxury boutiques by words, designer, size, city and price",
+          "Read one item with every size's live stock and the page to buy",
+          "Say how an item fits, from the boutique's measurements and the designer's charts",
+          "Work out what an item costs delivered to a country, with delivery, duty and tax",
+          "Compare two to four items side by side",
+          "Find what to wear with an item",
+          "List new arrivals, newest first",
+          "List marked-down items with the old and the new price",
+          "Find where to buy a designer or an item, in stock and in a city",
+          "Check what a designer's item costs right now across boutiques",
+          "Give a designer's facts with sources, stock, price range and stockists",
+          "List the designers the same boutiques stock",
+          "Find independent boutiques in more than 140 cities, by kind and by designer stocked",
+          "Read a boutique's address, hours, designers, delivery, pickup and return terms",
+          "Find items that look like a photo or a post",
+          "Read the chart of designer items trending this week",
+          "Convert a size between systems from published charts",
+          "Estimate duty, tax and fees on an order from another country",
+          "Give gift ideas by budget and outfits with the items in stock"
+        ],
+        "websiteURL": "https://shopwithin.co/agents",
+        "supportURL": "https://shopwithin.co/contact",
+        "privacyPolicyURL": "https://shopwithin.co/privacy",
+        "termsOfServiceURL": "https://shopwithin.co/terms",
+        "defaultPrompt": [
+          "Find Jordan 4s in a size 10 under 500 dollars at a boutique in Toronto.",
+          "Where can I buy Chrome Hearts, and how much is a Chrome Hearts hoodie?",
+          "Which vintage boutiques are in Paris?"
+        ],
+        "brandColor": "#111111",
+        "brandColorDark": "#F2F2F2",
+        "composerIcon": "./assets/icon.png",
+        "logo": "./assets/logo.png"
+      },
+      "review": {
+        "test_cases": {
+          "positive": [
+            {
+              "description": "Search live stock by item, size, price and city",
+              "prompt": "Find Jordan 4s in a size 10 under 500 dollars at a boutique in Toronto.",
+              "tools_triggered": "search_pieces",
+              "expected_behavior": "Returns Jordan 4 sneakers in stock at Toronto boutiques that have a US men's 10 at or under 500 Canadian dollars, each with the shop, the price, the sizes in stock and a shopwithin.co link to buy. Prices are in the boutique's own currency, Canadian dollars."
+            },
+            {
+              "description": "Where to buy a designer, and what an item of theirs costs",
+              "prompt": "Where can I buy Chrome Hearts, and how much is a Chrome Hearts hoodie right now?",
+              "tools_triggered": "where_to_buy, price_check",
+              "expected_behavior": "Lists Chrome Hearts items in stock with their shops and links, then gives how many hoodies are in stock with the lowest, middle and highest price in the boutique's own currency and the cheapest few with links."
+            },
+            {
+              "description": "Find boutiques in a city by kind",
+              "prompt": "Which vintage boutiques are in Paris?",
+              "tools_triggered": "boutique_directory",
+              "expected_behavior": "Lists vintage shops in Paris from within's directory, each with its street or neighbourhood, a few designers it stocks and its page on shopwithin.co, and says whether each sells on within. It gives no ratings."
+            },
+            {
+              "description": "Convert a size between systems",
+              "prompt": "I wear a UK N ring. What is that in US sizes?",
+              "tools_triggered": "convert_size",
+              "expected_behavior": "Returns the row for UK N from within's ring size table with the size in the other systems, US included, names the chart's source and the day it was read, and links the size page on shopwithin.co."
+            },
+            {
+              "description": "Estimate duty, tax and fees on an order from another country",
+              "prompt": "What will I pay at the door for a 1,295 dollar wool coat made in Italy, shipped from Canada to the US?",
+              "tools_triggered": "estimate_duty",
+              "expected_behavior": "Returns each line (duty, any extra tariff, fees) with its amount and official source, and a total. Says it is an estimate and that the carrier's bill is the final word."
+            }
+          ],
+          "negative": [
+            {
+              "description": "Style advice with no shopping in it: the tools are not called, or a search is offered only after the advice.",
+              "prompt": "What should I wear to a wedding in October?"
+            },
+            {
+              "description": "A mass market item within does not carry: the assistant does not call the tools, or calls search_pieces once and reports the honest empty answer.",
+              "prompt": "Find me a cheap phone case."
+            },
+            {
+              "description": "A purchase inside the chat: no tool takes a payment; the assistant sends the shopper to the piece's page on shopwithin.co.",
+              "prompt": "Buy this jacket for me with my card."
+            }
+          ]
+        },
+        "demo_recording_url": "https://shopwithin.co/agents",
+        "commerce": true,
+        "commerce_description": "within is a marketplace of independent luxury boutiques that sell physical goods: clothes, shoes, bags and jewellery. The tools only read: they return items in stock with prices and the shopwithin.co page where the shopper buys through the boutique's own checkout. No tool adds to a bag, holds an item, takes a payment or places an order. within is paid a commission by the boutique on sales that begin on shopwithin.co; nothing is charged to the shopper above the boutique's own price, and ranking is never sold."
+      },
+      "publication": {
+        "countries": [],
+        "release_notes": "Twenty-six read only tools. New since the first draft: new arrivals, on sale, where to buy, price check, designer guide, similar brands, compare items, wear with, delivered price with duty and tax, pickup in a shop, a boutique directory in more than 140 cities, boutique details, delivery and returns, gift ideas and outfit ideas."
+      }
+    }
+  }
+}

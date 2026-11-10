@@ -1,0 +1,30 @@
+{
+  "name": "within",
+  "version": "0.3.1",
+  "description": "Live stock at independent luxury boutiques: find an item in your size, where to buy a designer, what it costs delivered, and boutiques in more than 140 cities, from the within MCP server, plus a skill on how to shop the boutiques well.",
+  "author": {
+    "name": "within",
+    "url": "https://shopwithin.co"
+  },
+  "homepage": "https://shopwithin.co/agents",
+  "repository": "https://github.com/startupbuilders777/within-mcp",
+  "license": "MIT",
+  "keywords": [
+    "shopping",
+    "boutiques",
+    "luxury",
+    "fashion",
+    "designer",
+    "where to buy",
+    "new arrivals",
+    "sale",
+    "visual search",
+    "size conversion",
+    "import duty",
+    "trending",
+    "gift ideas",
+    "boutique directory"
+  ],
+  "mcpServers": "./.mcp.json",
+  "skills": "./skills/"
+}

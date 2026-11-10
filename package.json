@@ -1,0 +1,56 @@
+{
+  "name": "within-mcp",
+  "version": "0.3.1",
+  "description": "MCP server for shopping independent luxury boutiques: live stock, sizes, prices, where to buy and what it costs delivered. A small local bridge to the hosted server at https://shopwithin.co/mcp.",
+  "type": "module",
+  "bin": {
+    "within-mcp": "bin/within-mcp.mjs"
+  },
+  "files": [
+    "bin",
+    "docs",
+    "examples",
+    "server.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "check": "node scripts/check.mjs",
+    "tools-doc": "node scripts/build-tools-doc.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2"
+  },
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "model-context-protocol",
+    "remote-mcp-server",
+    "shopping",
+    "ecommerce",
+    "fashion",
+    "luxury",
+    "boutiques",
+    "designer",
+    "sneakers",
+    "vintage",
+    "where-to-buy",
+    "size-conversion",
+    "import-duty",
+    "visual-search"
+  ],
+  "mcpName": "co.shopwithin/within",
+  "homepage": "https://shopwithin.co/agents",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/startupbuilders777/within-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/startupbuilders777/within-mcp/issues"
+  },
+  "author": "within <hello@shopwithin.co> (https://shopwithin.co)",
+  "license": "MIT"
+}

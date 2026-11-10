@@ -1,0 +1,10 @@
+{
+  "name": "within-mcp",
+  "version": "0.3.1",
+  "description": "Shop independent luxury boutiques: live stock, sizes, prices, where to buy and what it costs delivered. 26 read only tools from within's MCP server. Free, no key.",
+  "mcpServers": {
+    "within": {
+      "httpUrl": "https://shopwithin.co/mcp"
+    }
+  }
+}
