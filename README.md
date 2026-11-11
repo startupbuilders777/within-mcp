@@ -185,10 +185,10 @@ The server also has six starter prompts: find it in my size, where to buy, gift 
 
 ## What an answer looks like
 
-Every answer comes twice: a short text a person could read whole, and structured data with the same facts in fields. This is the text for "Jordan 4s in a size 10 under 500 dollars in Toronto", asked on 10 November 2026 and shortened here:
+Every answer comes twice: a short text a person could read whole, and structured data with the same facts in fields. This is the text for "Jordan 4s in a size 10 under 500 dollars in Toronto", asked on 10 November 2026 and shortened here (since 11 November the first line says "items"):
 
 ```
-3 pieces in Toronto, on the shelves right now:
+3 items in Toronto, on the shelves right now:
 1. Air Jordan 4 Retro OG "White Cement 2025", CAD 450, sizes in stock: US M 8 / W 9.5 · EU 41,
    ... US M 10 / W 11.5 · EU 44, ... US M 13 / W 14.5 · EU 47.5, at Outlined (Etobicoke).
    https://shopwithin.co/product/outlined/air-jordan-4-retro-og-white-cement-2025/8206119796936
@@ -225,6 +225,7 @@ No tool adds to a bag, holds an item, takes a payment or places an order. This i
 - The rate limit is a burst of 60 requests from one address, then one a second.
 - The server never asks for a name, an email or a login. It cannot see anyone's saved items, bag or orders.
 - `visual_search` matches a photo in memory and drops it. Nothing is saved.
+- We count each call to the tools: which tool, when, how long it took, whether it worked, how many results, which app called and the country of the computer that called. We never keep what was asked, a photo or an IP address.
 - The privacy policy is at https://shopwithin.co/privacy and the terms are at https://shopwithin.co/terms.
 
 ## The same tools over plain HTTPS
