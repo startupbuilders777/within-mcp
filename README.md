@@ -25,6 +25,7 @@ Each answer is what a real shop has in stock right now: designer clothes, shoes,
 - [The same tools over plain HTTPS](#the-same-tools-over-plain-https)
 - [Common questions](#common-questions)
 - [What is in this repo](#what-is-in-this-repo)
+- [Where it is listed](#where-it-is-listed)
 
 ## Connect
 
@@ -286,6 +287,13 @@ No. This repo holds the docs, the local bridge, the registry file and the plugin
 | `.mcp.json`, `skills/` | The same server address and skill at the root, for plugin directories that read a repo's root |
 | `scripts/check.mjs` | An end to end check of the bridge against the live server: `npm run check` |
 | `scripts/build-tools-doc.mjs` | Rewrites `docs/TOOLS.md` from the live server: `npm run tools-doc` |
+
+## Where it is listed
+
+It is in the official MCP registry as `co.shopwithin/within`, and on these lists:
+
+[![within MCP server](https://glama.ai/mcp/servers/startupbuilders777/within-mcp/badges/score.svg)](https://glama.ai/mcp/servers/startupbuilders777/within-mcp)
+[![Listed on clauderules.net](https://clauderules.net/api/badge/within-hku1)](https://clauderules.net/mcp/within-hku1)
 
 ## Contact
 
