@@ -15,6 +15,7 @@
     "LICENSE"
   ],
   "scripts": {
+    "build": "node --check bin/within-mcp.mjs",
     "check": "node scripts/check.mjs",
     "tools-doc": "node scripts/build-tools-doc.mjs"
   },
