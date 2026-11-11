@@ -283,6 +283,7 @@ No. This repo holds the docs, the local bridge, the registry file and the plugin
 | `examples/` | Settings files and curl calls to copy |
 | `server.json` | The file published to the official MCP registry |
 | `plugins/within/` | The within plugin: the server's address and one skill on how to shop the boutiques well |
+| `.mcp.json`, `skills/` | The same server address and skill at the root, for plugin directories that read a repo's root |
 | `scripts/check.mjs` | An end to end check of the bridge against the live server: `npm run check` |
 | `scripts/build-tools-doc.mjs` | Rewrites `docs/TOOLS.md` from the live server: `npm run tools-doc` |
 
