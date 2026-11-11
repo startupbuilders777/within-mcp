@@ -1,6 +1,6 @@
 # The tools, in full
 
-Read from `https://shopwithin.co/mcp` on 2026-11-10: within · luxury boutiques 0.3.1, 26 tools and 6 starter prompts. Every tool only reads. This page is written by `npm run tools-doc`, so it says what the server says.
+Read from `https://shopwithin.co/mcp` on 2026-11-11: within · luxury boutiques 0.3.1, 26 tools and 6 starter prompts. Every tool only reads. This page is written by `npm run tools-doc`, so it says what the server says.
 
 ## Contents
 
