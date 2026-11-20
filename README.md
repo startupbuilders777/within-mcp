@@ -276,6 +276,10 @@ No.
 
 No. This repo holds the docs, the local bridge, the registry file and the plugin. The server itself runs at shopwithin.co, and its code is not published.
 
+## A worked example from one Toronto boutique
+
+[Reproduce a Chrome Hearts category count](examples/yorkville-2026-11-20/README.md) from 804 listings at Utopia. The example pairs a live `boutique_shelf` query with the frozen November 20, 2026 data and a Python script that checks all 33 categories.
+
 ## What is in this repo
 
 | Path | What it is |
