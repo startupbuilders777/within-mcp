@@ -1,0 +1,41 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.326732372655,
+          47.614412140475
+        ]
+      },
+      "properties": {
+        "title": "Stüssy Archive Seattle",
+        "address": "1526 Bellevue Ave, Seattle, WA 98122",
+        "description": "November 27 through December 6, 2026. The flyer gives the dates and street address. Check the notice for opening hours before you go.",
+        "source": "https://www.stussy.com/blogs/news/stussy-archive-seattle",
+        "checked": "2026-11-21",
+        "marker-color": "#87428d"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.318058915703,
+          47.614150874843
+        ]
+      },
+      "properties": {
+        "title": "35th North",
+        "address": "1100 E Pike St, Seattle, WA 98122",
+        "description": "A skate shop on East Pike that carries Stüssy. Its online Stüssy collection is linked below.",
+        "source": "https://35thnorth.com/collections/stussy",
+        "checked": "2026-11-21",
+        "marker-color": "#276550"
+      }
+    }
+  ]
+}
